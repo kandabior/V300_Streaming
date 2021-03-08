@@ -13,9 +13,7 @@ app.get('/',  async(req, res) => {
   // return res.redirect('https://'+req.headers.host+'/192.168.98.1/00_1d_96_07_c1_ee-0002760366_thumbnail.jpg');
 });
 
-app.get('/image',async (req,res)=>{
-  return 'hello'
-});
+
 https
   .createServer(
     options,
