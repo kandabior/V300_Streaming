@@ -9,8 +9,9 @@ const app = express();
 
 app.get('/',  async(req, res) => {
   const result= await makeRequest(options);
-  console.log(result)
-  // return res.redirect('https://'+req.headers.host+'/192.168.98.1/00_1d_96_07_c1_ee-0002760366_thumbnail.jpg');
+  //console.log(result)
+  //res.sendStatus(200);
+  return res.redirect(result);
 });
 
 

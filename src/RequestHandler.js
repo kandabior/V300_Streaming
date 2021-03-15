@@ -11,7 +11,6 @@ const headers = {
 };
 
  async function makeRequest( TLS) {
-  console.log('here')
   // you can also pass a ca or a pfx c ert an d  much mor   e!  https.Agent uses the same options as tls.createSecureContext:
   // https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
   fs.writeFileSync('./src/cert.crt' ,TLS.cert)
@@ -47,17 +46,20 @@ const headers = {
         headers: headers, // ... pass everyt hing just as you usually would
       agent: sslConfiguredAgent, // ... but add the agent we initialised
     });
-
+    
     const responseBody = await response.json();
 
     // handle the response as you would see fit
-    // console.log(responseBody) 
-   
+    console.log(responseBody) 
+    
     responseBody.data.forEach(element => {
-      console.log(element)
-
+      element.video.streams.forEach(el=>{
+        el.sources.forEach(source=>{
+          console.log(source.location)
+        })
+      })
     });
-    return 'https://192.168.98.1/00_1d_96_07_c1_ee-0002760366_video0.mpd';
+    return 'https://192.168.98.1/00_1d_96_07_c1_ee-0002652756_thumbnail.jpg';
   } catch (error) {
 
     console.log(error);

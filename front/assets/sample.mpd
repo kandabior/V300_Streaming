@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" type="static" mediaPresentationDuration="PT18.0208S" minBufferTime="PT1S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+	<Period id="0" duration="PT2.0023S">
+		<AdaptationSet id="2" group="1" contentType="audio" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" audioSamplingRate="24000" mimeType="audio/mp4" label="front">
+			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+			<Representation id="AudioAAC" codecs="mp4a.40.2" bandwidth="51000">
+				<BaseURL>00_1d_96_07_c1_ee-0002730336_0002731597_0002731600_audio0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="624-1015">
+					<Initialization range="0-623" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" group="2" contentType="video" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" maxWidth="1920" maxHeight="1080" sar="1:1" maxFrameRate="30000/1000" mimeType="video/mp4" label="front">
+			<Representation id="Video1080" codecs="avc1.640028" width="1920" height="1080" frameRate="30000/1000" bandwidth="10000000">
+				<BaseURL>00_1d_96_07_c1_ee-0002730336_0002731597_0002731600_video0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="748-1139">
+					<Initialization range="0-747" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+	<Period id="1" duration="PT8.00923S">
+		<AdaptationSet id="2" group="1" contentType="audio" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" audioSamplingRate="24000" mimeType="audio/mp4" label="front">
+			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+			<Representation id="AudioAAC" codecs="mp4a.40.2" bandwidth="51000">
+				<BaseURL>0002731601_0002731616_audio0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="624-1015">
+					<Initialization range="0-623" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" group="2" contentType="video" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" maxWidth="1920" maxHeight="1080" sar="1:1" maxFrameRate="30000/1000" mimeType="video/mp4" label="front">
+			<Representation id="Video1080" codecs="avc1.640028" width="1920" height="1080" frameRate="30000/1000" bandwidth="10000000">
+				<BaseURL>0002731601_0002731616_video0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="748-1139">
+					<Initialization range="0-747" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+	<Period id="2" duration="PT4.00461S">
+		<AdaptationSet id="2" group="1" contentType="audio" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" audioSamplingRate="24000" mimeType="audio/mp4" label="front">
+			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+			<Representation id="AudioAAC" codecs="mp4a.40.2" bandwidth="51000">
+				<BaseURL>0002731617_0002731624_audio0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="624-1015">
+					<Initialization range="0-623" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" group="2" contentType="video" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" maxWidth="1920" maxHeight="1080" sar="1:1" maxFrameRate="30000/1000" mimeType="video/mp4" label="front">
+			<Representation id="Video1080" codecs="avc1.640028" width="1920" height="1080" frameRate="30000/1000" bandwidth="10000000">
+				<BaseURL>0002731617_0002731624_video0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="748-1139">
+					<Initialization range="0-747" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+	<Period id="3" duration="PT4.00461S">
+		<AdaptationSet id="2" group="1" contentType="audio" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" audioSamplingRate="24000" mimeType="audio/mp4" label="front">
+			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+			<Representation id="AudioAAC" codecs="mp4a.40.2" bandwidth="51000">
+				<BaseURL>0002731625_0002731632_audio0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="624-1015">
+					<Initialization range="0-623" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" group="2" contentType="video" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1" maxWidth="1920" maxHeight="1080" sar="1:1" maxFrameRate="30000/1000" mimeType="video/mp4" label="front">
+			<Representation id="Video1080" codecs="avc1.640028" width="1920" height="1080" frameRate="30000/1000" bandwidth="10000000">
+				<BaseURL>0002731625_0002731632_video0.mp4</BaseURL>
+				<SegmentBase timescale="90000" presentationTimeOffset="0" indexRangeExact="true" indexRange="748-1139">
+					<Initialization range="0-747" />
+				</SegmentBase>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>
