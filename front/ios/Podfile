@@ -12,6 +12,8 @@ target 'stream' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
   target 'streamTests' do
     inherit! :complete
     # Pods for testing

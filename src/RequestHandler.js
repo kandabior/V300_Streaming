@@ -59,7 +59,8 @@ const headers = {
         })
       })
     });
-    return 'https://192.168.98.1/00_1d_96_07_c1_ee-0002652756_thumbnail.jpg';
+    // return 'http://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/2sec/BigBuckBunny_2s_onDemand_2014_05_09.mpd'
+    return 'https://192.168.98.1/00_1d_96_07_c1_ee-0002699071_video0.mpd';
   } catch (error) {
 
     console.log(error);

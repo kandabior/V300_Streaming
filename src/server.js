@@ -11,7 +11,7 @@ app.get('/',  async(req, res) => {
   const result= await makeRequest(options);
   //console.log(result)
   //res.sendStatus(200);
-  return res.redirect(result);
+  return res.send(result);
 });
 
 
