@@ -15,8 +15,7 @@
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
-    <PackageCertificateKeyFile>stream_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>F1D5D76B9B8C2494B99C153D7123EA0CD9ADCEC1</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>D617D78512BF2AD7788A5D44A61DFED3AED8F77E</PackageCertificateThumbprint>
     <PackageCertificatePassword>password</PackageCertificatePassword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -83,7 +82,9 @@
     <Import Project="$(ReactNativeWindowsDir)\PropertySheets\external\Microsoft.ReactNative.Uwp.CppApp.props" Condition="Exists('$(ReactNativeWindowsDir)\PropertySheets\External\Microsoft.ReactNative.Uwp.CppApp.props')" />
     <Import Project="..\packages\$(WinUIPackageProps)" Condition="'$(WinUIPackageProps)'!='' And Exists('..\packages\$(WinUIPackageProps)')" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="UserMacros">
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -160,8 +161,14 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="certificate.cer">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
+    <None Include="stream_TemporaryKey.pfx">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
     </Text>
@@ -174,6 +181,12 @@
   <ItemGroup>
     <ProjectReference Include="..\..\node_modules\react-native-video\windows\ReactNativeVideoCPP\ReactNativeVideoCPP.vcxproj">
       <Project>{765365e4-9553-4900-9f69-e26d4309c8da}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj">
+      <Project>{729d9af8-cd9e-4427-9f6c-fb757e287729}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\node_modules\react-native-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj">
+      <Project>{fcb612ad-facc-410c-828c-24b5940b2762}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

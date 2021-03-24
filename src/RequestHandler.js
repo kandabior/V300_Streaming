@@ -13,8 +13,9 @@ const headers = {
  async function makeRequest( TLS) {
   // you can also pass a ca or a pfx c ert an d  much mor   e!  https.Agent uses the same options as tls.createSecureContext:
   // https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options
-  fs.writeFileSync('./src/cert.crt' ,TLS.cert)
-  fs.writeFileSync('./src/key.crt',TLS.key)
+  // fs.writeFileSync('./src/cert.crt' ,TLS.cert)
+  // fs.writeFileSync('./src/key.crt',TLS.key)
+  
   const options = {
     // when using this code in production, for high throughput you should not read
     //   from the filesystem for every call, it can be quite expensive. Instead

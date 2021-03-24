@@ -1,5 +1,7 @@
 const selfsigned = require('selfsigned');
 const pki = require('node-forge').pki;
+const fs= require ('fs')
+
 
 function createCertificate() {
     console.log( "Create certificate...");
@@ -17,9 +19,11 @@ function createCertificate() {
             pkcs7: true, // include PKCS#7 as part of the output (default: false)
             clientCertificate: true // generate client cert signed by the original key (default: false)
         });
+        fs.writeFileSync('./src/pem',pems.cert)
         return {
             "cert": pems.cert,
             "key": pems.private
+            // pems
         }
     } catch (err) {
         console.error( "Couldn't create certificate by error: " + err.message);

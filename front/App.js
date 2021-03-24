@@ -1,41 +1,44 @@
 import React,{useEffect,useState} from 'react'
 import Video from 'react-native-video'
 import {View,Text,StyleSheet,} from 'react-native'
-import instance  from './src/api/api'
-import axios from 'axios'
+import {WebView} from 'react-native-webview'
 
 
-const func = async(setState)=>{
+// const func = async(setState)=>{
   
-    console.log(instance)
-    const res= await instance.get('/')
-    .then(res=>setState(res.data))
-    .catch(err=>console.log(err))
+//     console.log(instance)
+//     const res= await instance.get('/')
+//     .then(res=>setState(res.data))
+//     .catch(err=>console.log(err))
     
     
   
-}
+// }
 
 
 const App =  ()=>{
-  const [state,setState]=useState('');
+  // const [state,setState]=useState('');
 
-  useEffect(()=>{
-    func(setState);
-  },[])
+  // useEffect(()=>{
+  //   func(setState);
+  // },[])
    
   
-  console.log(state)
+  // console.log(state)
   return <View>
     {/* <Image source={{uri:'https://192.168.98.1/00_1d_96_07_c1_ee-0002760365_thumbnail.jpg'}}
       style={{width:100,height: 50}}/> */}
-    <Text>{state}</Text>
+    <Text>hello</Text>
 
+    <WebView
+        source={{ uri: 'https://192.168.98.1/00_1d_96_07_c1_ee-0002730336_thumbnail.jpg' }}
+        style={{ marginTop: 20 }}
+      />
     <View style={styles.videoViewStyle}>
-      {state?<Video style={styles.videoStyle}
-        source={{uri:state}}
+      {/* <Video style={styles.videoStyle}
+        source={{uri:'https://192.168.98.1/00_1d_96_07_c1_ee-0002171319_video0.mpd'}}
         resizeMode={'contain'}
-        controls/>: <View/> }
+        controls/> */}
       
     </View>
     

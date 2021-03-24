@@ -1745,7 +1745,7 @@
     "semver" "^5.3.0"
     "shimmer" "^1.1.0"
 
-"async@^2.4.0":
+"async@^2.0.0", "async@^2.4.0":
   "integrity" "sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg=="
   "resolved" "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz"
   "version" "2.6.3"
@@ -5309,6 +5309,16 @@
   "resolved" "https://registry.npmjs.org/mkpath/-/mkpath-0.1.0.tgz"
   "version" "0.1.0"
 
+"mout@^0.11.1":
+  "integrity" "sha1-ujYR318OWx/7/QEWa48C0fX6K5k="
+  "resolved" "https://registry.npmjs.org/mout/-/mout-0.11.1.tgz"
+  "version" "0.11.1"
+
+"mout@^1.0.0":
+  "integrity" "sha512-w0OUxFEla6z3d7sVpMZGBCpQvYh8PHS1wZ6Wu9GNKHMpAHWJ0if0LsQZh3DlOqw55HlhJEOMLpFnwtxp99Y5GA=="
+  "resolved" "https://registry.npmjs.org/mout/-/mout-1.2.2.tgz"
+  "version" "1.2.2"
+
 "ms@2.0.0":
   "integrity" "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
   "resolved" "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz"
@@ -5493,6 +5503,14 @@
   "resolved" "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz"
   "version" "2.2.0"
 
+"nyks@^2.9.0":
+  "integrity" "sha1-Pa/bu+t2VRnECyN0fpGYw5oQNro="
+  "resolved" "https://registry.npmjs.org/nyks/-/nyks-2.31.3.tgz"
+  "version" "2.31.3"
+  dependencies:
+    "async" "^2.0.0"
+    "mout" "^1.0.0"
+
 "oauth-sign@~0.9.0":
   "integrity" "sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ=="
   "resolved" "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz"
@@ -5620,6 +5638,14 @@
   "version" "6.4.0"
   dependencies:
     "is-wsl" "^1.1.0"
+
+"openssl@^1.1.0":
+  "integrity" "sha1-cvklV37QyZUxMG+E0RU8oQvTrv0="
+  "resolved" "https://registry.npmjs.org/openssl/-/openssl-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "mout" "^0.11.1"
+    "nyks" "^2.9.0"
 
 "optionator@^0.8.1":
   "integrity" "sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA=="
