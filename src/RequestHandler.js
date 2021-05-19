@@ -3,7 +3,8 @@
 const fs= require ('fs')
 const https = require('https');
 const  fetch = require( 'node-fetch');
-const reqUrl = 'https://192.168.98.1/SmartControl/api/v1/events';
+// const reqUrl = 'http://192.168.98.1/SmartControlTest/api/v1/devices/BWC2-003053/cameras/1/live/start';
+const reqUrl = 'http://192.168.98.1/SmartControlTest/devices/BWC2-003053/cameras/1/live/start';
 
 const headers = {
   Accept: 'application/json',
@@ -43,9 +44,9 @@ const headers = {
   try {
     // make the request just as you would normally ...
     const response = await fetch(reqUrl, {
-        method:'GET',
+        method:'POST',
         headers: headers, // ... pass everyt hing just as you usually would
-      agent: sslConfiguredAgent, // ... but add the agent we initialised
+      // agent: sslConfiguredAgent, // ... but add the agent we initialised
     });
     
     const responseBody = await response.json();
@@ -53,13 +54,13 @@ const headers = {
     // handle the response as you would see fit
     console.log(responseBody) 
     
-    responseBody.data.forEach(element => {
-      element.video.streams.forEach(el=>{
-        el.sources.forEach(source=>{
-          console.log(source.location)
-        })
-      })
-    });
+    // responseBody.data.forEach(element => {
+    //   element.video.streams.forEach(el=>{
+    //     el.sources.forEach(source=>{
+    //       console.log(source.location)
+    //     })
+    //   })
+    // });
     // return 'http://ftp.itec.aau.at/datasets/DASHDataset2014/BigBuckBunny/2sec/BigBuckBunny_2s_onDemand_2014_05_09.mpd'
     return 'https://192.168.98.1/00_1d_96_07_c1_ee-0002699071_video0.mpd';
   } catch (error) {

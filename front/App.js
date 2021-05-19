@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Video from 'react-native-video'
-import {View,Text,StyleSheet,} from 'react-native'
-import {WebView} from 'react-native-webview'
+import {View,Text,StyleSheet,Image} from 'react-native'
+// import {WebView} from 'react-native-webview'
 
 
 // const func = async(setState)=>{
@@ -26,26 +26,29 @@ const App =  ()=>{
   
   // console.log(state)
   return <View>
-    {/* <Image source={{uri:'https://192.168.98.1/00_1d_96_07_c1_ee-0002760365_thumbnail.jpg'}}
-      style={{width:100,height: 50}}/> */}
+    <Image source={{uri:'http://192.168.98.1/00_1d_96_07_c1_ee-0002760365_thumbnail.jpg'}}
+      style={{width:500,height: 300}}/>
     <Text>hello</Text>
 
-    <WebView
+    {/* <WebView
         source={{ uri: 'https://192.168.98.1/00_1d_96_07_c1_ee-0002730336_thumbnail.jpg' }}
         style={{ marginTop: 20 }}
-      />
+      /> */}
     <View style={styles.videoViewStyle}>
-      {/* <Video style={styles.videoStyle}
-        source={{uri:'https://192.168.98.1/00_1d_96_07_c1_ee-0002171319_video0.mpd'}}
+      <Video style={styles.videoStyle}
+        source={{uri:"http://127.0.0.1:9911/"}}
+        onLoad={ ()=>console.log('hello')}
         resizeMode={'contain'}
-        controls/> */}
+        controls/>
       
     </View>
     
   </View>
 
 }
-
+// http://192.168.98.1/00_1d_96_07_c1_ee-0002713743_video0.mpd
+// http://192.168.98.1/00_1d_96_07_c1_ee-0002717794_video0.mpd
+// http://192.168.98.1/00_1d_96_07_c1_ee-0002733274_video0.mpd
 const styles= StyleSheet.create({
   videoStyle:{
     width: 700,
